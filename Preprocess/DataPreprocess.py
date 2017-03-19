@@ -88,7 +88,7 @@ class ABCPreprocess:
         self.dir_path = dir_path;    #path of directionary
         self.data = data    #ABC files information
             
-    def processFolder(self):
+    def processFolder(self, file_name):
         """
         Concatenate all lines from all files in dir_path and return a list.
         """
@@ -111,7 +111,7 @@ class ABCPreprocess:
                             break
                     self.data += lines[i:]
         
-        file_object = open('dataset.dat', 'w')
+        file_object = open(file_name, 'w')
         file_object.writelines(self.data)
         file_object.close()
         

@@ -17,8 +17,8 @@ class MergeFiles:
         self.dir_path = dir_path
         self.data = data
         
-    def main(self):
+    def main(self, file_name):
         data = []          
         test = DataPreprocess.ABCPreprocess(self.dir_path, self.data)
-        test.processFolder()
+        test.processFolder(file_name)
         
