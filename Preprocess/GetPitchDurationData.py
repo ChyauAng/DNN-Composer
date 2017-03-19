@@ -11,9 +11,9 @@ The number of vectors to be trained is 235141 * 2.
 The number of vectors to be tested is 112461 * 2.
 
 """
-dir_name = 'C:\\Users\Anamnesis\\Documents\\Aptana Studio 3 Workspace\\DNN_Composer\\dataset'
-dir_name_train = 'C:\\Users\Anamnesis\\Documents\\Aptana Studio 3 Workspace\\DNN_Composer\\dataset\\train'
-dir_name_test = 'C:\\Users\Anamnesis\\Documents\\Aptana Studio 3 Workspace\\DNN_Composer\\dataset\\test'
+dir_name = '..\\dataset'
+dir_name_train = '..\\dataset\\train'
+dir_name_test = '..\\dataset\\test'
 
 #MergeABCfiles Tester
 #done
