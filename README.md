@@ -1,4 +1,4 @@
-#DNN-Composer
+# DNN-Composer
 An experimental work in Python mainly using GNN and CNN for Algorithmic composition.<br>
 
 　This work is inspired by [this paper](https://arxiv.org/abs/1606.07251) and [this paper](https://arxiv.org/abs/1508.06576).<br>
@@ -6,7 +6,7 @@ An experimental work in Python mainly using GNN and CNN for Algorithmic composit
 　Take the differences between a melody and an image into consideration,the idea metioned above is just a tentative version.<br>
 　This work is now under experiment.The final version will be commited once finished.<br>
 
-##The preprocessing part<br>
+## The preprocessing part<br>
 
 　[The ABC notation](http://trillian.mit.edu/~jc/music/abc/doc/ABCtut.html), compared with the MIDI, is more human-oriented than machine-oriented. So a preprocessing procedure is necessary. This part aims at extracting useful information from the raw text data of the data set, by processing the prefixes and suffixes of each note.<br>
 
