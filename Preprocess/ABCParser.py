@@ -5,7 +5,7 @@ from __future__ import division
 import re
 import string
 import math
-import GlobalConstant
+from Preprocess import GlobalConstant
 
 
 class TuneBook(object):
@@ -229,7 +229,7 @@ class Measure(object):
 				# Parse a chord.
 				self._parseChord()
 
-			elif self.text[self._pos] in "^=_" or self.text[self._pos].isalpha():
+			elif self.text[self._pos] in "^=_" or self.text[self._pos].isalpha() or self.text[self._pos] == '#':
 				# Found the start of a note.
 				self._parseNote()
 
@@ -360,9 +360,17 @@ class Note(MusicItem):
 		Parses a note out of the given string. Returns the raw text that
 		was parsed from str.
 		"""
-
 		self.__init__()
 		pos = 0
+		
+		if str == '#ending':
+			self.text = '#ending'
+			self.duration = 0
+			self.nextNoteDurationPlus = 0.0
+			self.nextNoteDurationFlag = False
+			return self.text, self.duration , self.nextNoteDurationPlus, self.nextNoteDurationFlag
+		
+		
 		if pos < len(str) and str[pos] in "^=_":
 			# Sharp, natural, or flat symbol.
 			self.text += str[pos]

@@ -15,7 +15,7 @@ class ABCPreprocess:
     measure
         An array of measure information, as measure objects.
     pitch
-        A two dimension array of pitch information, as arrays of 33 dimension arrays representing the pitch of each note.
+        A two dimension array of pitch information, as arrays of 34 dimension arrays representing the pitch of each note.
     pitch_dictionary
         A dictionary whose keys are notes and values are indexes of the pitch of each note .
     duration
@@ -128,7 +128,7 @@ class ABCPreprocess:
                 self.listdir(os.path.join(dir_path, item),files)   
             else:
                 files.append(os.path.join(dir_path, item))
-    
+        
     
     def keyNormalization(self, file_name):
         """
@@ -384,7 +384,9 @@ class ABCPreprocess:
         for measure in measures:
             for line_measure in measure:
                 #separate the measures by regular expression, then analyze the duration
-                p = re.compile('((\^|_|=)?[a-gA-G]((,*)|(\'*))?([2-9]?//*[2-9]?)?([2-9])?(>*)?(<*)?)')
+                #p = re.compile('((\^|_|=)?[a-gA-G]((,*)|(\'*))?([2-9]?//*[2-9]?)?([2-9])?(>*)?(<*)?)')
+                p = re.compile('(((\^|_|=)?[a-gA-G]((,*)|(\'*))?([2-9]?//*[2-9]?)?([2-9])?(>*)?(<*)?)|(#ending))')
+                
                 #p = re.compile('((\^|_|=)?[a-gA-G]([2-9]?//*[2-9]?)?([2-9])?((<*)?|(>*)?)?)')
                 note = p.findall(line_measure.__str__())
                 for i in range(len(note)):
@@ -419,22 +421,27 @@ class ABCPreprocess:
     #fixed the lost problem.
     def getPitch(self,file_name):
         """
-        Get pitch information, return an array of 33 dimension array. Refer to pitch.dat.
+        Get pitch information, return an array of 34 dimension array. Refer to pitch.dat.
         """
         
         notes = self.getNotes(file_name)
         pitch_list = [(0) for i in range(33)]
+        pitch_timesteps = []
           
         for note in notes:
-            p = re.compile('((\^|_|=)?[a-gA-G]((,*)|(\'*))?)')
+            #p = re.compile('((\^|_|=)?[a-gA-G]((,*)|(\'*))?)')
+            p = re.compile('(((\^|_|=)?[a-gA-G]((,*)|(\'*))?)|(#ending))')
             current_notes = p.findall(note)
                 
             for i in range(len(current_notes)):
-                pitch_list[self.pitch_dictionary[current_notes[i][0].__str__()]] = 1
-                self.pitch.append(pitch_list)
-                pitch_list = [(0) for i in range(33)]
-  
-                   
+                if current_notes[i][0].__str__() != '#ending':
+                    pitch_list[self.pitch_dictionary[current_notes[i][0].__str__()]] = 1
+                    pitch_timesteps.append(pitch_list)
+                    pitch_list = [(0) for i in range(33)]
+                else:
+                    self.pitch.append(pitch_timesteps)
+                    pitch_timesteps = []
+                       
         return self.pitch 
  
  
@@ -445,6 +452,7 @@ class ABCPreprocess:
        
         notes = self.getNotes(file_name)
         duration_list = [(0) for i in range(23)]
+        duration_timesteps = []
         
         new_nextNoteDurationPlus = 0.0
         new_nextNoteDurationFlag = False
@@ -458,12 +466,16 @@ class ABCPreprocess:
                 count = count + 1
             else:
                 text, current_duration, nextNoteDurationPlus, nextNoteDurationFlag = note_analysis.parse(note, new_nextNoteDurationPlus, new_nextNoteDurationFlag)
-            
-            duration_list[self.duration_dictionary[current_duration]] = 1
-            #self.duration append a vector of the duration information of a note
-            self.duration.append(duration_list)
-            
-            duration_list = [(0) for i in range(23)]
+            if text == '#ending':
+                #self.duration append a vector of the duration information of a note
+                self.duration.append(duration_timesteps)
+                duration_timesteps = []
+            else:
+                
+                duration_list[self.duration_dictionary[current_duration]] = 1
+                duration_timesteps.append(duration_list)
+                duration_list = [(0) for i in range(23)]
+
             new_nextNoteDurationPlus = nextNoteDurationPlus
             new_nextNoteDurationFlag = nextNoteDurationFlag
 

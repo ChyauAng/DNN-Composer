@@ -1,3 +1,38 @@
+#global declaration
+global index0
+global index1
+global index2
+global index3
+global index4
+global index5
+global index6
+global index7
+global index8
+global index9
+global index10
+global index11
+global index12
+global index13
+global index14
+global index15
+global index16
+global index17
+global index18
+global index19
+global index20
+global index21
+global index22
+
+global nextNoteDurationBase
+
+global note
+
+global pitch_train
+global pitch_test
+
+global duration_train
+global duration_test
+
 #used for getting duration information
 index0 = 1/4
 index1 = 1/3
@@ -42,40 +77,20 @@ note = ['G,', '^G,', '_G,', '=G,',
         'a', '^a', '_a', '=a',
         'b', '^b', '_b', '=b',
         'c\'', '^c\'', '_c\'', '=c\'',
-        'd\'', '^d\'', '_d\'', '=d\'']        
+        'd\'', '^d\'', '_d\'', '=d\'',
+        '%ending']        
 
 
 #nextNoteDurationBase is the base value of duration
 
 nextNoteDurationBase = 1.0
 
+pitch_train = []
+pitch_test = []
 
-#global declaration
-global index0
-global index1
-global index2
-global index3
-global index4
-global index5
-global index6
-global index7
-global index8
-global index9
-global index10
-global index11
-global index12
-global index13
-global index14
-global index15
-global index16
-global index17
-global index18
-global index19
-global index20
-global index21
-global index22
+duration_train = []
+duration_test = []
 
-global nextNoteDurationBase
 
-global note
+
 
