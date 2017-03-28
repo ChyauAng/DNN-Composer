@@ -83,7 +83,8 @@ class getData(object):
   
                     rhythm_timesteps.append(pitch[i][k * timestep + j] + duration[i][k * timestep + j])
                         
-                if i != (len(pitch) - 5):
+#                 if i != (len(pitch) - timestep):
+                if k != (steps_number - timestep):
                     for j in range(timestep):
                         melody_timesteps.append(pitch[i][k * timestep + j] + duration[i][k * timestep + j + 1])
                     
@@ -92,7 +93,7 @@ class getData(object):
   
                     
                     for j in range(timestep):
-                            rhythm_labels_timesteps.append(duration[i][k * timestep + j + 1])
+                        rhythm_labels_timesteps.append(duration[i][k * timestep + j + 1])
 
                 else:
                     for j in range(timestep):

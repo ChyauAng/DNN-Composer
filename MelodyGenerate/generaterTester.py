@@ -82,7 +82,8 @@ GlobalConstant.duration_test = copy.deepcopy(duration)
      
 # file_object.close()                        
 generator = MelodyGenerater.MelodyGenerate()
-generator.getData(10)
+# generator.getData(10)
+generator.getData(8)
 
 file_object = open('pitch_train.dat', 'w')
 for i in range(len(GlobalConstant.pitch_train)):
@@ -105,9 +106,12 @@ generator.trainProcess()
 generator.evaluateProcess()
 
 
-pitch_index = [9, 9, 9, 14, 14, 12, 12, 9, 5, 7]
-duration_index = [10, 14, 10, 14, 10, 14, 10, 14, 10, 14]
-pitch, duration =generator.generater(50, pitch_index, duration_index)
+# pitch_index = [9, 9, 9, 14, 14, 12, 12, 9, 5, 7]
+# duration_index = [10, 14, 10, 14, 10, 14, 10, 14, 10, 14]
+
+pitch_index = [12, 3, 3, 14, 12, 10, 14, 5]
+duration_index = [11, 2, 14, 11, 2, 14, 11, 2]
+pitch, duration =generator.generater(10, pitch_index, duration_index)
 
 generator.filesWriter(pitch, duration, 'pitch_generation.dat', 'duration_generation.dat')
 

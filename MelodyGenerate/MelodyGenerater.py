@@ -109,16 +109,16 @@ class MelodyGenerate:
         """
         self.melody.add(GRU(128, consume_less = 'mem', return_sequences = True,
                            input_shape = (self.timestep, 56)))
-        self.melody.add(Dropout(0.5))
+        #self.melody.add(Dropout(0.5))
         self.rhythm.add(GRU(128, consume_less = 'mem', return_sequences = True,
                            input_shape = (self.timestep, 56)))
-        self.rhythm.add(Dropout(0.5))
+        #self.rhythm.add(Dropout(0.5))
          
         for i in range(2):
             self.melody.add(GRU(128, return_sequences = True))
-            self.melody.add(Dropout(0.5))
+            #self.melody.add(Dropout(0.5))
             self.rhythm.add(GRU(128, return_sequences = True))
-            self.rhythm.add(Dropout(0.5))
+            #self.rhythm.add(Dropout(0.5))
             
 #         self.melody.add(GRU(128, consume_less = 'mem', return_sequences=True,
 #                            input_shape = (None, self.data_dim)))
@@ -187,8 +187,8 @@ class MelodyGenerate:
             rhythm_x[0][i][duration_index[i] + 33] = 1
 
         for i in range(self.timestep):
-            self.pitch_generate.append(list(rhythm_x[0][i][0 : 32]))
-            self.duration_generate.append(list(rhythm_x[0][i][33 : 55]))
+            self.pitch_generate.append(list(rhythm_x[0][i][0 : 33]))
+            self.duration_generate.append(list(rhythm_x[0][i][33 : 56]))
         
         
         for i in range(length):
@@ -222,8 +222,8 @@ class MelodyGenerate:
                 next_rhythm_x[0][j][next_duration_index[0][j]] = 1
             
             for j in range(self.timestep):
-                self.pitch_generate.append(list(next_rhythm_x[0][j][0 : 32]))
-                self.duration_generate.append(list(next_rhythm_x[0][j][33 : 55]))
+                self.pitch_generate.append(list(next_rhythm_x[0][j][0 : 33]))
+                self.duration_generate.append(list(next_rhythm_x[0][j][33 : 56]))
             
             melody_x = copy.deepcopy(next_melody_x)
             rhythm_x = copy.deepcopy(next_rhythm_x)
