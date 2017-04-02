@@ -111,9 +111,12 @@ class ABCPreprocess:
                             break
                     self.data += lines[i:]
         
+        self.data = self.keyNormalization(self.data)
         file_object = open(file_name, 'w')
         file_object.writelines(self.data)
         file_object.close()
+        
+        self.data = []
         
         #return data
     
@@ -130,27 +133,28 @@ class ABCPreprocess:
                 files.append(os.path.join(dir_path, item))
         
     
-    def keyNormalization(self, file_name):
+#     def keyNormalization(self, file_name):
+    def keyNormalization(self, text):
         """
         Transpose the key of every song to C Major
         """
         
         #song is a 2-dimension array carrying the information of every song
         song = [[] for i in range(2317)]
-        text = []
+#         text = []
         raw_line = []
         key = ''
         flag =True
         
-        file = open(file_name, 'Ur')
-        text = file.readlines()
-        file.close()
+#         file = open(file_name, 'Ur')
+#         text = file.readlines()
+#         file.close()
         
         #print(text)
         
         song_count = -1
         for line in text:
-            line = re.sub('\n', '', line)
+#             line = re.sub('\n', '', line)
             if re.search('X:[0-9]+', line) != None:
                 song_count = song_count + 1
             song[song_count].append(line)
@@ -163,12 +167,14 @@ class ABCPreprocess:
                     key = re.sub('K:', '', every_line)
                     key = re.sub('\n', '', key)
                     flag =False
+                    raw_line.append(every_line)
                     
 #                     print(key)
 #                     print(len(key))
                     
                     #every_line = every_line.replace('K:', '')
                 elif re.search('(([A-J]|[L-Z]):[A-Z]*[a-z]*)', every_line) != None:
+                    raw_line.append(every_line)
                     flag =False
                     
                 else:
@@ -178,56 +184,136 @@ class ABCPreprocess:
                     if key == 'Am':
                         pass
                     elif key == 'A':
+                        if re.search('\^C', every_line) != None:
+                            every_line = re.sub('\^C', 'D', every_line)
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
+                        if re.search('\^G', every_line) != None:
+                            every_line = re.sub('\^G', 'A', every_line)
                         every_line = re.sub('C', '^C', every_line)
                         every_line = re.sub('F', '^F', every_line)
                         every_line = re.sub('G', '^G', every_line)
                         
+                        if re.search('\^c', every_line) != None:
+                            every_line = re.sub('\^c', 'd', every_line)
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
+                        if re.search('\^g', every_line) != None:
+                            every_line = re.sub('\^g', 'a', every_line)
                         every_line = re.sub('c', '^c', every_line)
                         every_line = re.sub('f', '^f', every_line)
                         every_line = re.sub('g', '^g', every_line)
                     elif key == 'Amix':
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
                         every_line = re.sub('F', '^F', every_line, re.IGNORECASE)
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
                         every_line = re.sub('f', '^f', every_line, re.IGNORECASE)
                     elif key == 'Ador':
+                        if re.search('\^C', every_line) != None:
+                            every_line = re.sub('\^C', 'D', every_line)
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
                         every_line = re.sub('C', '^C', every_line)
                         every_line = re.sub('F', '^F', every_line)
                         
+                        if re.search('\^c', every_line) != None:
+                            every_line = re.sub('\^c', 'd', every_line)
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
                         every_line = re.sub('c', '^c', every_line)
                         every_line = re.sub('f', '^f', every_line)
                     #B
                     elif key == 'B':
+                        if re.search('\^C', every_line) != None:
+                            every_line = re.sub('\^C', 'D', every_line)
+                        if re.search('\^D', every_line) != None:
+                            every_line = re.sub('\^D', 'E', every_line)
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
+                        if re.search('\^G', every_line) != None:
+                            every_line = re.sub('\^G', 'A', every_line)
+                        if re.search('\^A', every_line) != None:
+                            every_line = re.sub('\^A', 'B', every_line)
                         every_line = re.sub('C', '^C', every_line)
                         every_line = re.sub('D', '^D', every_line)
                         every_line = re.sub('F', '^F', every_line)
                         every_line = re.sub('G', '^G', every_line)
                         every_line = re.sub('A', '^A', every_line)
                         
+                        if re.search('\^c', every_line) != None:
+                            every_line = re.sub('\^c', 'd', every_line)
+                        if re.search('\^d', every_line) != None:
+                            every_line = re.sub('\^d', 'e', every_line)
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
+                        if re.search('\^g', every_line) != None:
+                            every_line = re.sub('\^g', 'a', every_line)
+                        if re.search('\^a', every_line) != None:
+                            every_line = re.sub('\^a', 'b', every_line)
                         every_line = re.sub('c', '^c', every_line)
                         every_line = re.sub('d', '^d', every_line)
                         every_line = re.sub('f', '^f', every_line)
                         every_line = re.sub('g', '^g', every_line)
                         every_line = re.sub('a', '^a', every_line)
                     elif key == 'Bm':
+                        if re.search('\^C', every_line) != None:
+                            every_line = re.sub('\^C', 'D', every_line)
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
                         every_line = re.sub('C', '^C', every_line)
                         every_line = re.sub('F', '^F', every_line)
                         
+                        if re.search('\^c', every_line) != None:
+                            every_line = re.sub('\^c', 'd', every_line)
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
                         every_line = re.sub('c', '^c', every_line)
                         every_line = re.sub('f', '^f', every_line)
                     elif key == 'Bmix':
+                        if re.search('\^C', every_line) != None:
+                            every_line = re.sub('\^C', 'D', every_line)
+                        if re.search('\^D', every_line) != None:
+                            every_line = re.sub('\^D', 'E', every_line)
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
+                        if re.search('\^G', every_line) != None:
+                            every_line = re.sub('\^G', 'A', every_line)
                         every_line = re.sub('C', '^C', every_line)
                         every_line = re.sub('D', '^D', every_line)
                         every_line = re.sub('F', '^F', every_line)
                         every_line = re.sub('G', '^G', every_line)
                         
+                        if re.search('\^c', every_line) != None:
+                            every_line = re.sub('\^c', 'd', every_line)
+                        if re.search('\^d', every_line) != None:
+                            every_line = re.sub('\^d', 'e', every_line)
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
+                        if re.search('\^g', every_line) != None:
+                            every_line = re.sub('\^g', 'a', every_line)
                         every_line = re.sub('c', '^c', every_line)
                         every_line = re.sub('d', '^d', every_line)
                         every_line = re.sub('f', '^f', every_line)
                         every_line = re.sub('g', '^g', every_line)
                     elif key == 'Bdor':
+                        if re.search('\^C', every_line) != None:
+                            every_line = re.sub('\^C', 'D', every_line)
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
+                        if re.search('\^G', every_line) != None:
+                            every_line = re.sub('\^G', 'A', every_line)
                         every_line = re.sub('C', '^C', every_line)
                         every_line = re.sub('F', '^F', every_line)
                         every_line = re.sub('G', '^G', every_line)
                         
+                        if re.search('\^c', every_line) != None:
+                            every_line = re.sub('\^c', 'd', every_line)
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
+                        if re.search('\^g', every_line) != None:
+                            every_line = re.sub('\^g', 'a', every_line)
                         every_line = re.sub('c', '^c', every_line)
                         every_line = re.sub('f', '^f', every_line)
                         every_line = re.sub('g', '^g', every_line)
@@ -235,107 +321,250 @@ class ABCPreprocess:
                     elif key == 'C':
                         pass
                     elif key == 'Cm':
+                        if re.search('_E', every_line) != None:
+                            every_line = re.sub('_E', 'D', every_line)
+                        if re.search('_A', every_line) != None:
+                            every_line = re.sub('_A', 'G', every_line)
+                        if re.search('_B', every_line) != None:
+                            every_line = re.sub('_B', 'A', every_line)
                         every_line = re.sub('E', '_E', every_line)
                         every_line = re.sub('A', '_A', every_line)
                         every_line = re.sub('B', '_B', every_line)
                         
+                        if re.search('_e', every_line) != None:
+                            every_line = re.sub('_e', 'd', every_line)
+                        if re.search('_a', every_line) != None:
+                            every_line = re.sub('_a', 'g', every_line)
+                        if re.search('_b', every_line) != None:
+                            every_line = re.sub('_b', 'a', every_line)
                         every_line = re.sub('e', '_e', every_line)
                         every_line = re.sub('a', '_a', every_line)
                         every_line = re.sub('b', '_b', every_line)
                     elif key == 'Cmix':
+                        if re.search('_B', every_line) != None:
+                            every_line = re.sub('_B', 'A', every_line)
                         every_line = re.sub('B', '_B', every_line)
+                        
+                        if re.search('_b', every_line) != None:
+                            every_line = re.sub('_b', 'a', every_line)
                         every_line = re.sub('b', '_b', every_line)
                     elif key == 'Cdor':
+                        if re.search('_E', every_line) != None:
+                            every_line = re.sub('_E', 'D', every_line)
+                        if re.search('_B', every_line) != None:
+                            every_line = re.sub('_B', 'A', every_line)
                         every_line = re.sub('E', '_E', every_line)
                         every_line = re.sub('B', '_B', every_line)
                         
+                        if re.search('_e', every_line) != None:
+                            every_line = re.sub('_e', 'd', every_line)
+                        if re.search('_b', every_line) != None:
+                            every_line = re.sub('_b', 'a', every_line)
                         every_line = re.sub('e', '_e', every_line)
                         every_line = re.sub('b', '_b', every_line)
                     #D
                     elif key == 'D':
+                        if re.search('\^C', every_line) != None:
+                            every_line = re.sub('\^C', 'D', every_line)
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
                         every_line = re.sub('C', '^C', every_line)
                         every_line = re.sub('F', '^F', every_line)
                         
+                        if re.search('\^c', every_line) != None:
+                            every_line = re.sub('\^c', 'd', every_line)
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
                         every_line = re.sub('c', '^c', every_line)
                         every_line = re.sub('f', '^f', every_line)
                     elif key == 'Dm':
+                        if re.search('_B', every_line) != None:
+                            every_line = re.sub('_B', 'A', every_line)
                         every_line = re.sub('B', '_B', every_line)
+                        
+                        if re.search('_b', every_line) != None:
+                            every_line = re.sub('_b', 'a', every_line)
                         every_line = re.sub('b', '_b', every_line)
                     elif key == 'Dmix':
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
                         every_line = re.sub('F', '^F', every_line)
+                        
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
                         every_line = re.sub('f', '^f', every_line)
                     elif key == 'Ddor':
                         pass
                     #E
                     elif key == 'E':
+                        if re.search('\^C', every_line) != None:
+                            every_line = re.sub('\^C', 'D', every_line)
+                        if re.search('\^D', every_line) != None:
+                            every_line = re.sub('\^D', 'E', every_line)
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
+                        if re.search('\^G', every_line) != None:
+                            every_line = re.sub('\^G', 'A', every_line)
                         every_line = re.sub('C', '^C', every_line)
                         every_line = re.sub('D', '^D', every_line)
                         every_line = re.sub('F', '^F', every_line)
                         every_line = re.sub('G', '^G', every_line)
                         
+                        if re.search('\^c', every_line) != None:
+                            every_line = re.sub('\^c', 'd', every_line)
+                        if re.search('\^d', every_line) != None:
+                            every_line = re.sub('\^d', 'e', every_line)
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
+                        if re.search('\^g', every_line) != None:
+                            every_line = re.sub('\^g', 'a', every_line)
                         every_line = re.sub('c', '^c', every_line)
                         every_line = re.sub('d', '^d', every_line)
                         every_line = re.sub('f', '^f', every_line)
                         every_line = re.sub('g', '^g', every_line)
                     elif key == 'Em':
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
                         every_line = re.sub('F', '^F', every_line)
+                        
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
                         every_line = re.sub('f', '^f', every_line)
                     elif key == 'Emix':
+                        if re.search('\^C', every_line) != None:
+                            every_line = re.sub('\^C', 'D', every_line)
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
+                        if re.search('\^G', every_line) != None:
+                            every_line = re.sub('\^G', 'A', every_line)
                         every_line = re.sub('C', '^C', every_line)
                         every_line = re.sub('F', '^F', every_line)
                         every_line = re.sub('G', '^G', every_line)
                         
+                        if re.search('\^c', every_line) != None:
+                            every_line = re.sub('\^c', 'd', every_line)
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
+                        if re.search('\^g', every_line) != None:
+                            every_line = re.sub('\^g', 'a', every_line)
                         every_line = re.sub('c', '^c', every_line)
                         every_line = re.sub('f', '^f', every_line)
                         every_line = re.sub('g', '^g', every_line)
                     elif key == 'Edor':
+                        if re.search('\^C', every_line) != None:
+                            every_line = re.sub('\^C', 'D', every_line)
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
                         every_line = re.sub('C', '^C', every_line)
                         every_line = re.sub('F', '^F', every_line)
                         
+                        if re.search('\^c', every_line) != None:
+                            every_line = re.sub('\^c', 'd', every_line)
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
                         every_line = re.sub('c', '^c', every_line)
                         every_line = re.sub('f', '^f', every_line)
                     #F
                     elif key == 'F':
+                        if re.search('_B', every_line) != None:
+                            every_line = re.sub('_B', 'A', every_line)
                         every_line = re.sub('B', '_B', every_line)
+                        
+                        if re.search('_b', every_line) != None:
+                            every_line = re.sub('_b', 'a', every_line)
                         every_line = re.sub('b', '_b', every_line)
                     elif key == 'Fm':
+                        if re.search('_D', every_line) != None:
+                            every_line = re.sub('_D', 'C', every_line)
+                        if re.search('_E', every_line) != None:
+                            every_line = re.sub('_E', 'D', every_line)
+                        if re.search('_A', every_line) != None:
+                            every_line = re.sub('_A', 'G', every_line)
+                        if re.search('_B', every_line) != None:
+                            every_line = re.sub('_B', 'A', every_line)
                         every_line = re.sub('D', '_D', every_line)
                         every_line = re.sub('E', '_E', every_line)
                         every_line = re.sub('A', '_A', every_line)
                         every_line = re.sub('B', '_B', every_line)
                         
+                        if re.search('_d', every_line) != None:
+                            every_line = re.sub('_d', 'c', every_line)
+                        if re.search('_e', every_line) != None:
+                            every_line = re.sub('_e', 'd', every_line)
+                        if re.search('_a', every_line) != None:
+                            every_line = re.sub('_a', 'g', every_line)
+                        if re.search('_b', every_line) != None:
+                            every_line = re.sub('_b', 'a', every_line)
                         every_line = re.sub('d', '_d', every_line)
                         every_line = re.sub('e', '_e', every_line)
                         every_line = re.sub('a', '_a', every_line)
                         every_line = re.sub('b', '_b', every_line)
                     elif key == 'Fmix':
+                        if re.search('_E', every_line) != None:
+                            every_line = re.sub('_E', 'D', every_line)
+                        if re.search('_B', every_line) != None:
+                            every_line = re.sub('_B', 'A', every_line)
                         every_line = re.sub('E', '_E', every_line)
                         every_line = re.sub('B', '_B', every_line)
                         
+                        if re.search('_e', every_line) != None:
+                            every_line = re.sub('_e', 'd', every_line)
+                        if re.search('_b', every_line) != None:
+                            every_line = re.sub('_b', 'a', every_line)
                         every_line = re.sub('e', '_e', every_line)
                         every_line = re.sub('b', '_b', every_line)
                     elif key == 'Fdor':
+                        if re.search('_E', every_line) != None:
+                            every_line = re.sub('_E', 'D', every_line)
+                        if re.search('_A', every_line) != None:
+                            every_line = re.sub('_A', 'G', every_line)
+                        if re.search('_B', every_line) != None:
+                            every_line = re.sub('_B', 'A', every_line)
                         every_line = re.sub('E', '_E', every_line)
                         every_line = re.sub('A', '_A', every_line)
                         every_line = re.sub('B', '_B', every_line)
                         
+                        if re.search('_e', every_line) != None:
+                            every_line = re.sub('_e', 'd', every_line)
+                        if re.search('_a', every_line) != None:
+                            every_line = re.sub('_a', 'g', every_line)
+                        if re.search('_b', every_line) != None:
+                            every_line = re.sub('_b', 'a', every_line)
                         every_line = re.sub('e', '_e', every_line)
                         every_line = re.sub('a', '_a', every_line)
                         every_line = re.sub('b', '_b', every_line)
                     #G
                     elif key == 'G':
+                        if re.search('\^F', every_line) != None:
+                            every_line = re.sub('\^F', 'G', every_line)
                         every_line = re.sub('F', '^F', every_line)
+                        
+                        if re.search('\^f', every_line) != None:
+                            every_line = re.sub('\^f', 'g', every_line)
                         every_line = re.sub('f', '^f', every_line)
                     elif key == 'Gm':
+                        if re.search('_E', every_line) != None:
+                            every_line = re.sub('_E', 'D', every_line)
+                        if re.search('_B', every_line) != None:
+                            every_line = re.sub('_B', 'A', every_line)
                         every_line = re.sub('E', '_E', every_line)
                         every_line = re.sub('B', '_B', every_line)
                         
+                        if re.search('_e', every_line) != None:
+                            every_line = re.sub('_e', 'd', every_line)
+                        if re.search('_b', every_line) != None:
+                            every_line = re.sub('_b', 'a', every_line)
                         every_line = re.sub('e', '_e', every_line)
                         every_line = re.sub('b', '_b', every_line)
                     elif key == 'Gmix':
                         pass
                     elif key == 'Gdor':
+                        if re.search('_B', every_line) != None:
+                            every_line = re.sub('_B', 'A', every_line)
                         every_line = re.sub('B', '_B', every_line)
+                        
+                        if re.search('_b', every_line) != None:
+                            every_line = re.sub('_b', 'a', every_line)
                         every_line = re.sub('b', '_b', every_line)
                     #key error
                     else:
