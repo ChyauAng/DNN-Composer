@@ -1,0 +1,407 @@
+<svg xmlns="http://www.w3.org/2000/svg" color="black" width="816px" height="1056px" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" version="1.1">
+<style type="text/css">
+.fill {fill: currentColor}
+.stroke {stroke: currentColor; fill: none; stroke-width: .7}
+</style>
+<title>X.tmp page 1</title>
+<g transform="scale(1.067)">
+<!-- title: Melody Generated -->
+</g>
+<g font-family="serif" font-size="20" transform="scale(1.067)">
+<text text-anchor="middle" x="253.15" y="79.43">Melody Generated</text>
+</g>
+<g font-family="serif" font-size="20" transform="scale(1.067)">
+<path class="stroke" style="stroke-width: 1;" d="M 156.95 144.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 266.05 144.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 375.05 144.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 487.45 144.43 v -24" />
+<path class="stroke" d="M 18.75 144.43 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7" />
+<defs>
+<path class="fill" id="utclef" d="m -50 -90 c -72 -41 -72 -158 52 -188 c 150 -10 220 188 90 256 c -114 52 -275 0 -293 -136 c -15 -181 93 -229 220 -334 c 88 -87 79 -133 62 -210 c -51 33 -94 105 -89 186 c 17 267 36 374 49 574 c 6 96 -19 134 -77 135 c -80 1 -126 -93 -61 -133 c 85 -41 133 101 31 105 c 23 17 92 37 90 -92 c -10 -223 -39 -342 -50 -617 c 0 -90 0 -162 96 -232 c 56 72 63 230 22 289 c -74 106 -257 168 -255 316 c 9 153 148 185 252 133 c 86 -65 29 -192 -80 -176 c -71 12 -105 67 -59 124" />
+<use id="tclef" transform="scale(0.045)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#utclef" />
+</defs>
+<use x="30.75" y="144.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tclef" />
+<g font-family="serif" font-size="16" font-style="normal" font-weight="bold" transform="translate(49.25 143.93) scale(1.2 1)">
+	<text text-anchor="middle">8</text>
+	<text text-anchor="middle" y="-12">6</text>
+</g>
+<path class="fill" d="M 63.45 151.63 l 33.2 -4.1 v -3.2 l -33.2 4.1" />
+<defs>
+<ellipse class="fill" id="hd" transform="rotate(-20)" rx="4.1" ry="2.9" />
+</defs>
+<use x="67.25" y="132.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 63.75 132.43 v 18.2" />
+<use x="83.55" y="123.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 80.05 123.43 v 25.2" />
+<use x="99.75" y="123.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 96.25 123.43 v 23.1" />
+<use x="117.65" y="132.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 114.15 132.43 v 21" />
+<use x="139.95" y="135.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 143.45 135.43 v -21" />
+<path class="fill" d="M 143.45 114.43 c 0.6 5.6 9.6 9 5.6 18.4 c 1.6 -6 -1.3 -11.6 -5.6 -12.8" />
+<path class="fill" d="M 165.65 151.63 l 33.2 -4.1 v -3.2 l -33.2 4.1" />
+<use x="169.45" y="132.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 165.95 132.43 v 18.2" />
+<use x="185.75" y="123.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 182.25 123.43 v 25.2" />
+<use x="201.95" y="123.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 198.45 123.43 v 23.1" />
+<path class="fill" d="M 221.35 113.23 l 34.9 4.2 v 3.2 l -34.9 -4.2" />
+<use x="218.25" y="132.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 221.75 132.43 v -18.2" />
+<use x="234.45" y="135.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 237.95 135.43 v -19.2" />
+<use x="252.45" y="141.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<defs>
+<path class="fill" id="usharp" d="m 136 -702 v 890 h 32 v -890 m 128 840 h 32 v -888 h -32 m -232 286 v 116 l 338 -96 v -116 m -338 442 v 116 l 338 -98 v -114" />
+<use id="sh0" transform="translate(-4 5) scale(0.018)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#usharp" />
+</defs>
+<use x="243.45" y="141.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sh0" />
+<path class="stroke" d="M 255.95 141.43 v -23.1" />
+<path class="fill" d="M 274.75 151.63 l 33.2 -4.1 v -3.2 l -33.2 4.1" />
+<use x="278.55" y="132.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 275.05 132.43 v 18.2" />
+<use x="294.85" y="123.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 291.35 123.43 v 25.2" />
+<use x="311.05" y="123.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 307.55 123.43 v 23.1" />
+<path class="fill" d="M 325.15 151.63 l 33.2 -4.1 v -3.2 l -33.2 4.1" />
+<use x="328.95" y="132.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 325.45 132.43 v 18.2" />
+<use x="345.25" y="123.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 341.75 123.43 v 25.2" />
+<use x="361.45" y="123.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 357.95 123.43 v 23.1" />
+<path class="fill" d="M 390.65 113.23 l 34.9 4.2 v 3.2 l -34.9 -4.2" />
+<use x="387.55" y="132.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 391.05 132.43 v -18.2" />
+<use x="403.75" y="135.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 407.25 135.43 v -19.2" />
+<use x="421.75" y="141.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<use x="412.75" y="141.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sh0" />
+<path class="stroke" d="M 425.25 141.43 v -23.1" />
+<path class="fill" d="M 442.85 116.13 l 34.9 7.2 v 3.2 l -34.9 -7.2" />
+<use x="439.65" y="135.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 443.15 135.43 v -18.2" />
+<use x="457.65" y="141.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<use x="448.65" y="141.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sh0" />
+<path class="stroke" d="M 461.15 141.43 v -20.5" />
+<use x="473.95" y="147.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 477.45 147.43 v -23.1" />
+</g>
+<g font-family="serif" font-size="20" transform="scale(1.067)">
+<path class="stroke" style="stroke-width: 1;" d="M 141.05 218.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 255.05 218.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 370.85 218.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 487.45 218.43 v -24" />
+<path class="stroke" d="M 18.75 218.43 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7" />
+<use x="30.75" y="218.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tclef" />
+<path class="fill" d="M 51.45 228.63 l 35.6 -4.2 v -3.2 l -35.6 4.2" />
+<use x="55.25" y="209.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 51.75 209.43 v 18.2" />
+<use x="72.75" y="200.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 69.25 200.43 v 25.1" />
+<use x="90.15" y="200.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 86.65 200.43 v 23.1" />
+<path class="fill" d="M 105.65 227.43 l 18.2 0 v -3.2 l -18.2 0" />
+<use x="109.55" y="206.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 106.05 206.43 v 20" />
+<use x="126.95" y="206.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 123.45 206.43 v 20" />
+<path class="fill" d="M 149.75 228.63 l 35.6 -4.2 v -3.2 l -35.6 4.2" />
+<use x="153.55" y="209.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 150.05 209.43 v 18.2" />
+<use x="171.05" y="200.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 167.55 200.43 v 25.1" />
+<use x="188.55" y="200.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 185.05 200.43 v 23.1" />
+<path class="fill" d="M 209.15 186.43 l 35.6 0 v 3.2 l -35.6 0" />
+<use x="205.95" y="206.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 209.45 206.43 v -19" />
+<use x="223.45" y="206.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 226.95 206.43 v -19" />
+<use x="240.95" y="209.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 244.45 209.43 v -22" />
+<path class="fill" d="M 263.75 228.63 l 35.6 -4.2 v -3.2 l -35.6 4.2" />
+<use x="267.55" y="209.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 264.05 209.43 v 18.2" />
+<use x="285.05" y="200.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 281.55 200.43 v 25.1" />
+<use x="302.45" y="200.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 298.95 200.43 v 23.1" />
+<path class="fill" d="M 317.95 225.63 l 35.6 -3 v -3.2 l -35.6 3" />
+<use x="321.85" y="206.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 318.35 206.43 v 18.2" />
+<use x="339.25" y="200.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 335.75 200.43 v 22.7" />
+<use x="356.75" y="200.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 353.25 200.43 v 21.2" />
+<path class="fill" d="M 386.55 186.43 l 35.6 0 v 3.2 l -35.6 0" />
+<use x="383.35" y="206.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 386.85 206.43 v -19" />
+<use x="400.85" y="206.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 404.35 206.43 v -19" />
+<use x="418.25" y="209.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 421.75 209.43 v -22" />
+<path class="fill" d="M 440.75 187.23 l 36.5 4.2 v 3.2 l -36.5 -4.2" />
+<use x="437.65" y="206.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 441.15 206.43 v -18.2" />
+<use x="455.05" y="209.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 458.55 209.43 v -19.2" />
+<use x="473.35" y="215.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<use x="464.35" y="215.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sh0" />
+<path class="stroke" d="M 476.85 215.43 v -23" />
+</g>
+<g font-family="serif" font-size="20" transform="scale(1.067)">
+<path class="stroke" style="stroke-width: 1;" d="M 139.85 292.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 254.45 292.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 370.95 292.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 487.45 292.43 v -24" />
+<path class="stroke" d="M 18.75 292.43 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7" />
+<use x="30.75" y="292.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tclef" />
+<path class="fill" d="M 51.45 299.63 l 35.9 -4.2 v -3.2 l -35.9 4.2" />
+<use x="55.25" y="280.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 51.75 280.43 v 18.2" />
+<use x="72.85" y="271.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 69.35 271.43 v 25.1" />
+<use x="90.45" y="271.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 86.95 271.43 v 23.1" />
+<path class="fill" d="M 111.15 262.43 l 18.3 0 v 3.2 l -18.3 0" />
+<use x="108.05" y="283.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 111.55 283.43 v -20" />
+<use x="125.65" y="283.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 129.15 283.43 v -20" />
+<path class="fill" d="M 148.45 299.63 l 35.9 0 v -3.2 l -35.9 0" />
+<use x="152.35" y="280.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 148.85 280.43 v 18.2" />
+<use x="169.95" y="271.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 166.45 271.43 v 27.2" />
+<use x="187.45" y="280.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 183.95 280.43 v 18.2" />
+<path class="fill" d="M 208.25 261.23 l 35.9 0 v 3.2 l -35.9 0" />
+<use x="205.05" y="283.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 208.55 283.43 v -21.2" />
+<use x="222.65" y="283.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 226.15 283.43 v -21.2" />
+<use x="240.25" y="280.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 243.75 280.43 v -18.2" />
+<path class="fill" d="M 263.15 299.63 l 35.9 0 v -3.2 l -35.9 0" />
+<use x="266.95" y="280.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 263.45 280.43 v 18.2" />
+<use x="284.55" y="271.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 281.05 271.43 v 27.2" />
+<use x="302.15" y="280.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 298.65 280.43 v 18.2" />
+<path class="fill" d="M 317.75 302.63 l 35.9 -5.2 v -3.2 l -35.9 5.2" />
+<use x="321.65" y="283.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 318.15 283.43 v 18.2" />
+<use x="339.25" y="271.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 335.75 271.43 v 27.6" />
+<use x="356.85" y="271.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 353.35 271.43 v 25.1" />
+<path class="fill" d="M 386.65 261.23 l 35.9 0 v 3.2 l -35.9 0" />
+<use x="383.45" y="283.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 386.95 283.43 v -21.2" />
+<use x="401.05" y="283.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 404.55 283.43 v -21.2" />
+<use x="418.65" y="280.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 422.15 280.43 v -18.2" />
+<path class="fill" d="M 441.25 261.23 l 35.9 0 v 3.2 l -35.9 0" />
+<use x="438.15" y="283.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 441.65 283.43 v -21.2" />
+<use x="455.75" y="280.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 459.25 280.43 v -18.2" />
+<use x="473.35" y="283.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 476.85 283.43 v -21.2" />
+</g>
+<g font-family="serif" font-size="20" transform="scale(1.067)">
+<path class="stroke" style="stroke-width: 1;" d="M 174.85 366.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 329.75 366.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 487.45 366.43 v -24" />
+<path class="stroke" d="M 18.75 366.43 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7" />
+<use x="30.75" y="366.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tclef" />
+<path class="fill" d="M 51.45 376.63 l 49.6 -4.5 v -3.2 l -49.6 4.5" />
+<use x="55.25" y="357.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 51.75 357.43 v 18.2" />
+<use x="79.75" y="348.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 76.25 348.43 v 25" />
+<use x="104.15" y="348.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 100.65 348.43 v 22.8" />
+<path class="fill" d="M 127.45 375.43 l 25.1 0 v -3.2 l -25.1 0" />
+<use x="131.35" y="354.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 127.85 354.43 v 20" />
+<use x="155.75" y="354.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 152.25 354.43 v 20" />
+<path class="fill" d="M 184.65 376.63 l 49.6 0 v -3.2 l -49.6 0" />
+<use x="188.45" y="357.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 184.95 357.43 v 18.2" />
+<use x="212.95" y="348.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 209.45 348.43 v 27.2" />
+<use x="237.35" y="357.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 233.85 357.43 v 18.2" />
+<path class="fill" d="M 264.95 334.43 l 49.6 0 v 3.2 l -49.6 0" />
+<use x="261.85" y="354.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 265.35 354.43 v -19" />
+<use x="286.25" y="354.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 289.75 354.43 v -19" />
+<use x="310.75" y="357.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 314.25 357.43 v -22" />
+<path class="fill" d="M 346.55 329.23 l 49.6 0 v 3.2 l -49.6 0" />
+<use x="343.45" y="357.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 346.95 357.43 v -27.2" />
+<use x="367.85" y="348.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 371.35 348.43 v -18.2" />
+<use x="392.35" y="357.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 395.85 357.43 v -27.2" />
+<path class="fill" d="M 415.65 373.63 l 49.6 -3.2 v -3.2 l -49.6 3.2" />
+<use x="419.45" y="354.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 415.95 354.43 v 18.2" />
+<use x="443.95" y="342.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<use x="434.95" y="342.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sh0" />
+<path class="stroke" d="M 440.45 342.43 v 28.6" />
+<use x="468.45" y="348.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 464.95 348.43 v 21.1" />
+</g>
+<g font-family="serif" font-size="20" transform="scale(1.067)">
+<path class="stroke" style="stroke-width: 1;" d="M 159.25 440.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 256.35 440.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 370.95 440.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 487.45 440.43 v -24" />
+<path class="stroke" d="M 18.75 440.43 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7" />
+<use x="30.75" y="440.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tclef" />
+<path class="fill" d="M 58.45 408.43 l 35.9 0 v 3.2 l -35.9 0" />
+<use x="55.25" y="428.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 58.75 428.43 v -19" />
+<use x="72.85" y="428.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 76.35 428.43 v -19" />
+<use x="90.45" y="431.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 93.95 431.43 v -22" />
+<path class="fill" d="M 113.05 408.43 l 35.9 0 v 3.2 l -35.9 0" />
+<use x="109.95" y="428.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 113.45 428.43 v -19" />
+<use x="127.55" y="431.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 131.05 431.43 v -22" />
+<use x="145.05" y="428.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 148.55 428.43 v -19" />
+<path class="fill" d="M 167.95 447.63 l 35.9 -4.2 v -3.2 l -35.9 4.2" />
+<use x="171.75" y="428.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 168.25 428.43 v 18.2" />
+<use x="189.35" y="419.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 185.85 419.43 v 25.1" />
+<use x="206.95" y="419.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 203.45 419.43 v 23.1" />
+<path class="fill" d="M 227.75 410.43 l 18.3 0 v 3.2 l -18.3 0" />
+<use x="224.55" y="431.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 228.05 431.43 v -20" />
+<use x="242.15" y="431.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 245.65 431.43 v -20" />
+<path class="fill" d="M 264.95 447.63 l 35.9 0 v -3.2 l -35.9 0" />
+<use x="268.85" y="428.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 265.35 428.43 v 18.2" />
+<use x="286.45" y="419.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 282.95 419.43 v 27.2" />
+<use x="304.05" y="428.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 300.55 428.43 v 18.2" />
+<path class="fill" d="M 324.75 409.23 l 35.9 0 v 3.2 l -35.9 0" />
+<use x="321.65" y="431.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 325.15 431.43 v -21.2" />
+<use x="339.25" y="431.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 342.75 431.43 v -21.2" />
+<use x="356.85" y="428.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 360.35 428.43 v -18.2" />
+<path class="fill" d="M 379.65 447.63 l 35.9 0 v -3.2 l -35.9 0" />
+<use x="383.45" y="428.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 379.95 428.43 v 18.2" />
+<use x="401.05" y="419.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 397.55 419.43 v 27.2" />
+<use x="418.65" y="428.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 415.15 428.43 v 18.2" />
+<path class="fill" d="M 434.25 450.63 l 35.9 -5.2 v -3.2 l -35.9 5.2" />
+<use x="438.15" y="431.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 434.65 431.43 v 18.2" />
+<use x="455.75" y="422.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 452.25 422.43 v 24.6" />
+<use x="473.35" y="419.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 469.85 419.43 v 25.1" />
+</g>
+<g font-family="serif" font-size="20" transform="scale(1.067)">
+<path class="stroke" style="stroke-width: 1;" d="M 133.25 514.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 210.85 514.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 300.25 514.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 396.65 514.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 487.45 514.43 v -24" />
+<path class="stroke" style="stroke-width: 1;" d="M 484.45 514.43 v -24" />
+<path class="stroke" d="M 18.75 514.43 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7 m -468.7 -6 h 468.7" />
+<use x="30.75" y="514.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tclef" />
+<path class="fill" d="M 58.45 483.23 l 26.4 0 v 3.2 l -26.4 0" />
+<use x="55.25" y="505.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 58.75 505.43 v -21.2" />
+<use x="68.15" y="505.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 71.65 505.43 v -21.2" />
+<use x="81.05" y="502.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 84.55 502.43 v -18.2" />
+<path class="fill" d="M 98.15 483.23 l 26.4 0 v 3.2 l -26.4 0" />
+<use x="95.05" y="505.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 98.55 505.43 v -21.2" />
+<use x="107.85" y="502.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 111.35 502.43 v -18.2" />
+<use x="120.75" y="505.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 124.25 505.43 v -21.2" />
+<path class="fill" d="M 141.95 524.73 l 26.4 -3.9 v -3.2 l -26.4 3.9" />
+<use x="145.75" y="505.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 142.25 505.43 v 18.2" />
+<use x="158.65" y="496.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 155.15 496.43 v 25.3" />
+<use x="171.55" y="496.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 168.05 496.43 v 23.4" />
+<path class="fill" d="M 181.65 523.43 l 13.6 0 v -3.2 l -13.6 0" />
+<use x="185.55" y="502.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 182.05 502.43 v 20" />
+<use x="198.35" y="502.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 194.85 502.43 v 20" />
+<path class="fill" d="M 219.55 524.63 l 26.4 0 v -3.2 l -26.4 0" />
+<use x="223.35" y="505.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 219.85 505.43 v 18.2" />
+<use x="236.25" y="496.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 232.75 496.43 v 27.2" />
+<use x="249.15" y="505.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 245.65 505.43 v 18.2" />
+<path class="fill" d="M 265.15 482.43 l 26.4 0 v 3.2 l -26.4 0" />
+<use x="262.05" y="502.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 265.55 502.43 v -19" />
+<use x="274.85" y="502.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 278.35 502.43 v -19" />
+<use x="287.75" y="505.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 291.25 505.43 v -22" />
+<path class="fill" d="M 315.95 477.23 l 26.4 0 v 3.2 l -26.4 0" />
+<use x="312.75" y="505.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 316.25 505.43 v -27.2" />
+<use x="325.65" y="496.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 329.15 496.43 v -18.2" />
+<use x="338.55" y="505.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 342.05 505.43 v -27.2" />
+<path class="fill" d="M 349.45 521.73 l 31.6 -4.9 v -3.2 l -31.6 4.9" />
+<use x="353.25" y="502.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 349.75 502.43 v 18.2" />
+<use x="366.15" y="493.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 362.65 493.43 v 25.2" />
+<use x="384.15" y="490.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<use x="375.15" y="490.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sh0" />
+<path class="stroke" d="M 380.65 490.43 v 25.4" />
+<path class="fill" d="M 412.35 482.43 l 26.4 0 v 3.2 l -26.4 0" />
+<use x="409.15" y="502.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 412.65 502.43 v -19" />
+<use x="422.05" y="502.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 425.55 502.43 v -19" />
+<use x="434.95" y="505.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 438.45 505.43 v -22" />
+<path class="fill" d="M 452.05 482.43 l 26.4 0 v 3.2 l -26.4 0" />
+<use x="448.95" y="502.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 452.45 502.43 v -19" />
+<use x="461.75" y="505.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 465.25 505.43 v -22" />
+<use x="474.65" y="502.43" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#hd" />
+<path class="stroke" d="M 478.15 502.43 v -19" />
+</g>
+</svg>
