@@ -46,23 +46,16 @@ dataPreprocessor = DataPreprocess.ABCPreprocess(dir_name, data)
 file_name = 'train_set.dat'
 file_name_test = 'test_set.dat'
 
-
  
 pitch = dataPreprocessor.getPitch(file_name)
 GlobalConstant.pitch_train = copy.deepcopy(pitch)
-# file_object = open('pitch_train.dat', 'w')
-# for i in range(len(pitch)):
-#     file_object.writelines(pitch[i].__str__() + '\n')
  
- 
+
 data = []
 dataPreprocessor = DataPreprocess.ABCPreprocess(dir_name, data)    
 pitch = dataPreprocessor.getPitch(file_name_test)
 GlobalConstant.pitch_test = copy.deepcopy(pitch)
-# file_object = open('pitch_test.dat', 'w')
-# for i in range(len(pitch)):
-#     file_object.writelines(pitch[i].__str__() + '\n')
- 
+
  
 #Duration Tester 
 #done
@@ -70,9 +63,6 @@ data = []
 dataPreprocessor = DataPreprocess.ABCPreprocess(dir_name, data)
 duration = dataPreprocessor.getDuration(file_name)
 GlobalConstant.duration_train = copy.deepcopy(duration)
-# file_object = open('duration_train.dat', 'w')
-# for i in range(len(duration)):
-#     file_object.writelines(duration[i].__str__() + '\n')
  
 data = []
 dataPreprocessor = DataPreprocess.ABCPreprocess(dir_name, data)
@@ -85,7 +75,7 @@ GlobalConstant.duration_test = copy.deepcopy(duration)
 # file_object.close()                        
 generator = MelodyGenerater.MelodyGenerate()
 # generator.getData(10)
-generator.getData(8)
+generator.getData(23)
 
 # file_object = open('pitch_train.dat', 'w')
 # for i in range(len(GlobalConstant.pitch_train)):
@@ -106,17 +96,27 @@ generator.getData(8)
 generator.modelConstruction()
 generator.trainProcess()
 generator.evaluateProcess()
+generator.saveModels()
 
 
 # pitch_index = [9, 9, 9, 14, 14, 12, 12, 9, 5, 7]
 # duration_index = [10, 14, 10, 14, 10, 14, 10, 14, 10, 14]
 
-pitch_index = [12, 15, 15, 14, 12, 10, 14, 17]
-duration_index = [11, 2, 14, 11, 2, 14, 11, 2]
-pitch, duration =generator.generater(10, pitch_index, duration_index)
+# pitch_index = [12, 15, 15, 14, 12, 10, 14, 17]
+# duration_index = [11, 2, 14, 11, 2, 14, 11, 2]
 
-generator.filesWriter(pitch, duration, 'pitch_generation.dat', 'duration_generation.dat')
+pitch_index = [16, 21, 21, 16, 14,
+               16, 21, 21, 16, 14, 11,
+               16, 21, 21, 16, 21, 21,
+               16, 14, 11, 14, 11, 7]
+duration_index = [10, 10, 10, 14, 10,
+                  10, 10, 10, 10, 10, 10,
+                  10, 10, 10, 10, 10, 10,
+                  10, 10, 10, 10, 10, 10]
+pitch, duration =generator.generater(5, pitch_index, duration_index)
 
-generator.saveModels()
+generator.abcFileWriter(pitch, duration, 'generation.abc')
+
+
 
 

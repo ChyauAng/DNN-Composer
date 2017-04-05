@@ -109,16 +109,16 @@ class MelodyGenerate:
         """
         self.melody.add(GRU(128, consume_less = 'mem', return_sequences = True,
                            input_shape = (self.timestep, 56)))
-        #self.melody.add(Dropout(0.5))
+        self.melody.add(Dropout(0.5))
         self.rhythm.add(GRU(128, consume_less = 'mem', return_sequences = True,
                            input_shape = (self.timestep, 56)))
-        #self.rhythm.add(Dropout(0.5))
+        self.rhythm.add(Dropout(0.5))
          
         for i in range(2):
             self.melody.add(GRU(128, return_sequences = True))
-            #self.melody.add(Dropout(0.5))
+            self.melody.add(Dropout(0.5))
             self.rhythm.add(GRU(128, return_sequences = True))
-            #self.rhythm.add(Dropout(0.5))
+            self.rhythm.add(Dropout(0.5))
             
 #         self.melody.add(GRU(128, consume_less = 'mem', return_sequences=True,
 #                            input_shape = (None, self.data_dim)))
@@ -245,19 +245,38 @@ class MelodyGenerate:
         return maxIndex
     
             
-    def filesWriter(self, pitch, duration, pitch_file_name, duration_file_name):
+    def abcFileWriter(self, pitch, duration, file_name):
         """
         Write pitch and duration in files.
         """
-        file_pitch = open(pitch_file_name, 'w')
-        for i in range(len(pitch)):
-            file_pitch.writelines(pitch[i].__str__() + '\n')
-        file_pitch.close()   
+        pitch_index = 0
+        duration_index = 0
+        
+        file = open(file_name, 'w')
+        file.write('X:1\nT:Melody Generated\nM:6/8\nL:1/8\nK:C\n')
+        duration_index_list = ['1/4', '1/3', '1/2', '3/4', '3/8', 
+                               '5/8', '2/3', '2/5', '4/9', '4/5', 
+                               '1',  '3/2', '4/3', '9/8', '2', 
+                               '8/3', '9/4', '7/2', '3', '4', 
+                               '9/2', '6', '8']
+        
+        pitch_index_list=['G,', '^G,', 'A,', '^A,', 'B,', 'C', '^C', 'D',
+                          '^D', 'E', 'F', '^F', 'G', '^G', 'A', '^A',
+                          'B', 'c', '^c', 'd', '^d', 'e', 'f', '^f',
+                          'g', '^g', 'a', '^a', 'b', 'c\'', '^c\'', 'd\'', '^d\'']
+        for i in range(int(len(pitch) / self.timestep)):
+            for j in range(self.timestep):
+                pitch_index = pitch[i * self.timestep + j].index(1)
+                file.write(pitch_index_list[pitch_index].__str__())
+                
+                duration_index = duration[i * self.timestep + j].index(1)
+                file.write(duration_index_list[duration_index].__str__())
+                
+                file.write(' ')
+            file.write('|')
             
-        file_duration = open(duration_file_name, 'w')
-        for i in range(len(duration)):
-            file_duration.writelines(duration[i].__str__() + '\n')
-        file_duration.close()    
+        file.write('|')
+        file.close()    
         
     def saveModels(self):
         self.melody.save('melody.h5')
