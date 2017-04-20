@@ -1,5 +1,5 @@
 from keras.models import load_model
-from Preprocess import GlobalConstant as G
+from Preprocess import globalConstant as G
 import numpy as np
 import copy
 
@@ -122,17 +122,13 @@ def abcFileWriter( pitch, duration, timestep, file_name):
         file.close() 
 
 #seed
-timestep = 23
-pitch_index = [16, 21, 21, 16, 14,
-               16, 21, 21, 16, 14, 11,
-               16, 21, 21, 16, 21, 21,
-               16, 14, 11, 14, 11, 7]
-duration_index = [10, 10, 10, 14, 10,
-                  10, 10, 10, 10, 10, 10,
-                  10, 10, 10, 10, 10, 10,
-                  10, 10, 10, 10, 10, 10]
-
+generator.getData(15)
+#seed
+pitch_index = [9, 14, 9, 13, 14, 16, 18, 14, 21, 21, 19, 18, 14, 14, 11]
+duration_index = [14, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+  
 #generating process
-pitch, duration =generater(melody, rhythm, 5, timestep, pitch_index, duration_index)
+pitch, duration =generater(melody, rhythm, 3, timestep, pitch_index, duration_index)
+  
+abcFileWriter(pitch, duration, timestep, 'generation_seed.abc')
 
-abcFileWriter(pitch, duration, timestep, 'generation.abc')
