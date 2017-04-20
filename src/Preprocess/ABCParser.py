@@ -5,7 +5,7 @@ from __future__ import division
 import re
 import string
 import math
-from Preprocess import GlobalConstant
+from Preprocess import globalConstant
 
 
 class TuneBook(object):
@@ -417,12 +417,12 @@ class Note(MusicItem):
 		if self.length is None:
 			#if the previous note has < or > suffix
 			if self.nextNoteDurationFlag == True:
-				self.duration = GlobalConstant.nextNoteDurationBase + self.nextNoteDurationPlus
+				self.duration = globalConstant.nextNoteDurationBase + self.nextNoteDurationPlus
 				#print(self.duration)
 				
 			#if it does not have
 			else:
-				self.duration = GlobalConstant.nextNoteDurationBase
+				self.duration = globalConstant.nextNoteDurationBase
 				#print(self.duration)
 			self.nextNoteDurationPlus = 0.0
 			self.nextNoteDurationFlag = False
@@ -483,9 +483,9 @@ class Note(MusicItem):
 			#if it has more than one /
 			elif slash_count > 1:
 				if self.nextNoteDurationFlag == True:
-					self.duration = GlobalConstant.nextNoteDurationBase / math.pow(2, slash_count) + self.nextNoteDurationPlus
+					self.duration = globalConstant.nextNoteDurationBase / math.pow(2, slash_count) + self.nextNoteDurationPlus
 				else:
-					self.duration = GlobalConstant.nextNoteDurationBase / math.pow(2, slash_count)
+					self.duration = globalConstant.nextNoteDurationBase / math.pow(2, slash_count)
 				
 
 			#if it has no /		
@@ -494,11 +494,11 @@ class Note(MusicItem):
 				if re.search('[0-9]', self.length) == None:
 					#if the previous note has < or >
 					if self.nextNoteDurationFlag == True:
-						self.duration = GlobalConstant.nextNoteDurationBase +self.nextNoteDurationPlus
+						self.duration = globalConstant.nextNoteDurationBase +self.nextNoteDurationPlus
 						#print(self.duration)
 					#if the previous note does not have
 					else:
-						self.duration = GlobalConstant.nextNoteDurationBase
+						self.duration = globalConstant.nextNoteDurationBase
 
 				#or if also have one number
 				else:

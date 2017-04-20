@@ -3,8 +3,8 @@
 import os
 import re
 import numpy as np
-from Preprocess import ABCParser
-from Preprocess import GlobalConstant
+from Preprocess import abcParser
+from Preprocess import globalConstant
 
 class ABCPreprocess:
     """
@@ -37,53 +37,53 @@ class ABCPreprocess:
         #transpose the key of every song to C Major
         #key must be unchangable, so use 34 as the never reachable index
         #not nessary assign value by such a clumsy way. while the clumy way also has its advantages...  
-        self.pitch_dictionary = {GlobalConstant.note[0] : 0, GlobalConstant.note[1] : 1, GlobalConstant.note[2] : 34, GlobalConstant.note[3] : 0,
-                                GlobalConstant.note[4] : 2, GlobalConstant.note[5] : 3, GlobalConstant.note[6] : 1, GlobalConstant.note[7] : 2,
-                                GlobalConstant.note[8] : 4, GlobalConstant.note[9] : 5, GlobalConstant.note[10] : 3, GlobalConstant.note[11] : 4,
-                                GlobalConstant.note[12] : 5, GlobalConstant.note[13] : 6, GlobalConstant.note[14] : 4, GlobalConstant.note[15] : 5,
-                                GlobalConstant.note[16] : 7, GlobalConstant.note[17] : 8, GlobalConstant.note[18] : 6, GlobalConstant.note[19] : 7,
-                                GlobalConstant.note[20] : 9, GlobalConstant.note[21] : 10, GlobalConstant.note[22] : 8, GlobalConstant.note[23] : 9,
-                                GlobalConstant.note[24] : 10, GlobalConstant.note[25] : 11, GlobalConstant.note[26] : 9, GlobalConstant.note[27] : 10,
-                                GlobalConstant.note[28] : 12, GlobalConstant.note[29] : 13, GlobalConstant.note[30] : 11, GlobalConstant.note[31] : 12,
-                                GlobalConstant.note[32] : 14, GlobalConstant.note[33] : 15, GlobalConstant.note[34] : 13, GlobalConstant.note[35] : 14,
-                                GlobalConstant.note[36] : 16, GlobalConstant.note[37] : 17, GlobalConstant.note[38] : 15, GlobalConstant.note[39] : 16,
-                                GlobalConstant.note[40] : 17, GlobalConstant.note[41] : 18, GlobalConstant.note[42] : 16, GlobalConstant.note[43] : 17,
-                                GlobalConstant.note[44] : 19, GlobalConstant.note[45] : 20, GlobalConstant.note[46] : 18, GlobalConstant.note[47] : 19,
-                                GlobalConstant.note[48] : 21, GlobalConstant.note[49] : 22, GlobalConstant.note[50] : 20, GlobalConstant.note[51] : 21,
-                                GlobalConstant.note[52] : 22, GlobalConstant.note[53] : 23, GlobalConstant.note[54] : 21, GlobalConstant.note[55] : 22,
-                                GlobalConstant.note[56] : 24, GlobalConstant.note[57] : 25, GlobalConstant.note[58] : 23, GlobalConstant.note[59] : 24,
-                                GlobalConstant.note[60] : 26, GlobalConstant.note[61] : 27, GlobalConstant.note[62] : 25, GlobalConstant.note[63] : 26,
-                                GlobalConstant.note[64] : 28, GlobalConstant.note[65] : 29, GlobalConstant.note[66] : 27, GlobalConstant.note[67] : 28,
-                                GlobalConstant.note[68] : 29, GlobalConstant.note[69] : 30, GlobalConstant.note[70] : 28, GlobalConstant.note[71] : 29,
-                                GlobalConstant.note[72] : 31, GlobalConstant.note[73] : 32, GlobalConstant.note[74] : 30, GlobalConstant.note[75] : 31}
+        self.pitch_dictionary = {globalConstant.note[0] : 0, globalConstant.note[1] : 1, globalConstant.note[2] : 34, globalConstant.note[3] : 0,
+                                globalConstant.note[4] : 2, globalConstant.note[5] : 3, globalConstant.note[6] : 1, globalConstant.note[7] : 2,
+                                globalConstant.note[8] : 4, globalConstant.note[9] : 5, globalConstant.note[10] : 3, globalConstant.note[11] : 4,
+                                globalConstant.note[12] : 5, globalConstant.note[13] : 6, globalConstant.note[14] : 4, globalConstant.note[15] : 5,
+                                globalConstant.note[16] : 7, globalConstant.note[17] : 8, globalConstant.note[18] : 6, globalConstant.note[19] : 7,
+                                globalConstant.note[20] : 9, globalConstant.note[21] : 10, globalConstant.note[22] : 8, globalConstant.note[23] : 9,
+                                globalConstant.note[24] : 10, globalConstant.note[25] : 11, globalConstant.note[26] : 9, globalConstant.note[27] : 10,
+                                globalConstant.note[28] : 12, globalConstant.note[29] : 13, globalConstant.note[30] : 11, globalConstant.note[31] : 12,
+                                globalConstant.note[32] : 14, globalConstant.note[33] : 15, globalConstant.note[34] : 13, globalConstant.note[35] : 14,
+                                globalConstant.note[36] : 16, globalConstant.note[37] : 17, globalConstant.note[38] : 15, globalConstant.note[39] : 16,
+                                globalConstant.note[40] : 17, globalConstant.note[41] : 18, globalConstant.note[42] : 16, globalConstant.note[43] : 17,
+                                globalConstant.note[44] : 19, globalConstant.note[45] : 20, globalConstant.note[46] : 18, globalConstant.note[47] : 19,
+                                globalConstant.note[48] : 21, globalConstant.note[49] : 22, globalConstant.note[50] : 20, globalConstant.note[51] : 21,
+                                globalConstant.note[52] : 22, globalConstant.note[53] : 23, globalConstant.note[54] : 21, globalConstant.note[55] : 22,
+                                globalConstant.note[56] : 24, globalConstant.note[57] : 25, globalConstant.note[58] : 23, globalConstant.note[59] : 24,
+                                globalConstant.note[60] : 26, globalConstant.note[61] : 27, globalConstant.note[62] : 25, globalConstant.note[63] : 26,
+                                globalConstant.note[64] : 28, globalConstant.note[65] : 29, globalConstant.note[66] : 27, globalConstant.note[67] : 28,
+                                globalConstant.note[68] : 29, globalConstant.note[69] : 30, globalConstant.note[70] : 28, globalConstant.note[71] : 29,
+                                globalConstant.note[72] : 31, globalConstant.note[73] : 32, globalConstant.note[74] : 30, globalConstant.note[75] : 31}
 
                                 
         #list first, then convert it to numpy array. see ListToNumpyArrayTest.py.
         self.duration = []    # duration information
             
-        self.duration_dictionary = {GlobalConstant.index0 : 0, 
-                                    GlobalConstant.index1 : 1,
-                                    GlobalConstant.index2 : 2,
-                                    GlobalConstant.index3 : 3,
-                                    GlobalConstant.index4 : 4,
-                                    GlobalConstant.index5 : 5, 
-                                    GlobalConstant.index6 : 6,
-                                    GlobalConstant.index7 : 7,
-                                    GlobalConstant.index8 : 8,
-                                    GlobalConstant.index9 : 9,
-                                    GlobalConstant.index10 : 10,
-                                    GlobalConstant.index11 : 11,
-                                    GlobalConstant.index12 : 12,
-                                    GlobalConstant.index13 : 13,
-                                    GlobalConstant.index14 : 14,
-                                    GlobalConstant.index15 : 15,
-                                    GlobalConstant.index16 : 16,
-                                    GlobalConstant.index17 : 17,
-                                    GlobalConstant.index18 : 18,
-                                    GlobalConstant.index19 : 19,
-                                    GlobalConstant.index20 : 20,
-                                    GlobalConstant.index21 : 21,
-                                    GlobalConstant.index22 : 22                                 
+        self.duration_dictionary = {globalConstant.index0 : 0, 
+                                    globalConstant.index1 : 1,
+                                    globalConstant.index2 : 2,
+                                    globalConstant.index3 : 3,
+                                    globalConstant.index4 : 4,
+                                    globalConstant.index5 : 5, 
+                                    globalConstant.index6 : 6,
+                                    globalConstant.index7 : 7,
+                                    globalConstant.index8 : 8,
+                                    globalConstant.index9 : 9,
+                                    globalConstant.index10 : 10,
+                                    globalConstant.index11 : 11,
+                                    globalConstant.index12 : 12,
+                                    globalConstant.index13 : 13,
+                                    globalConstant.index14 : 14,
+                                    globalConstant.index15 : 15,
+                                    globalConstant.index16 : 16,
+                                    globalConstant.index17 : 17,
+                                    globalConstant.index18 : 18,
+                                    globalConstant.index19 : 19,
+                                    globalConstant.index20 : 20,
+                                    globalConstant.index21 : 21,
+                                    globalConstant.index22 : 22                                 
                                     }
         self.dir_path = dir_path;    #path of directionary
         self.data = data    #ABC files information
@@ -586,7 +586,7 @@ class ABCPreprocess:
         Get line information, return an array of line objects.
         """
         
-        tune=ABCParser.Tune(file_name)
+        tune=abcParser.Tune(file_name)
         #print(tune.line[0].measure)
         return tune.line
     
@@ -689,7 +689,7 @@ class ABCPreprocess:
         
         for note in notes:
             
-            note_analysis = ABCParser.Note()
+            note_analysis = abcParser.Note()
             if count == 0:
                 text, current_duration, nextNoteDurationPlus, nextNoteDurationFlag = note_analysis.parse(note)
                 count = count + 1

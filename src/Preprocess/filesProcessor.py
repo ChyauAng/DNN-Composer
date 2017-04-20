@@ -1,4 +1,4 @@
-from Preprocess import DataPreprocess
+from Preprocess import dataPreprocess
 
 class FilesProcess:
     """
@@ -19,7 +19,7 @@ class FilesProcess:
         
     def main(self, file_name):
         data = []          
-        test = DataPreprocess.ABCPreprocess(self.dir_path, self.data)
+        test = dataPreprocess.ABCPreprocess(self.dir_path, self.data)
         test.processFolder(file_name)
         
     def plusEnding(self, file_name):
